@@ -40,13 +40,13 @@ function ResultsList({ movies, selectedMovie, onPickMovie }) {
   }
 
   return (
-    <section className="pick-movie" aria-label="Pick a movie">
-      <div className="section-heading">
-        <h2>Pick a movie</h2>
-        <span>{movies.length.toLocaleString()} matches</span>
+    <section className="grid gap-3" aria-label="Pick a movie">
+      <div className="flex items-center justify-between gap-3">
+        <h2 className="text-xl font-black text-white">Pick a movie</h2>
+        <span className="text-sm font-black text-slate-400">{movies.length.toLocaleString()} matches</span>
       </div>
 
-      <div className="results">
+      <div className="grid gap-3">
         {visibleMovies.map((movie) => (
           <MovieCard
             movie={movie}
@@ -58,14 +58,24 @@ function ResultsList({ movies, selectedMovie, onPickMovie }) {
       </div>
 
       {movies.length > MOVIES_PER_PAGE && (
-        <div className="pagination" aria-label="Movie list pagination">
-          <button type="button" onClick={goToPreviousPage} disabled={currentPage === 1}>
+        <div className="grid grid-cols-[auto_1fr_auto] items-center gap-3" aria-label="Movie list pagination">
+          <button
+            className="rounded-lg border border-white/10 bg-white/[0.08] px-4 py-3 font-black text-white transition hover:border-orange-300 disabled:cursor-not-allowed disabled:text-slate-600"
+            type="button"
+            onClick={goToPreviousPage}
+            disabled={currentPage === 1}
+          >
             Previous
           </button>
-          <span>
+          <span className="text-center text-sm font-black text-slate-400">
             Page {currentPage} of {totalPages}
           </span>
-          <button type="button" onClick={goToNextPage} disabled={currentPage === totalPages}>
+          <button
+            className="rounded-lg border border-white/10 bg-white/[0.08] px-4 py-3 font-black text-white transition hover:border-orange-300 disabled:cursor-not-allowed disabled:text-slate-600"
+            type="button"
+            onClick={goToNextPage}
+            disabled={currentPage === totalPages}
+          >
             Next
           </button>
         </div>
