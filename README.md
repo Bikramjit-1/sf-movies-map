@@ -1,39 +1,59 @@
-# SF Movies
+# 🎬 SF Movies
 
-A React service that maps movie filming locations in San Francisco and lets users filter the map with autocomplete search.
+A React-based web application that visualizes movie filming locations in San Francisco on an interactive map. Users can search movies using autocomplete and explore real filming spots across the city.
 
-## Data
+🌐 **Live App:** https://bikramjit-1.github.io/sf-movies-map/  
+🎥 **Demo Video:** https://drive.google.com/file/d/13kCzih_xPG4nQSgIshi5yaMYMT-H5fki/view?usp=sharing
 
-The app loads public records from the DataSF Film Locations dataset:
+---
 
-Dataset page:
+## 📌 Features
 
-`https://data.sfgov.org/Culture-and-Recreation/Film-Locations-in-San-Francisco/yitu-d5am/about_data`
+- 🗺️ Interactive San Francisco map using Leaflet and OpenStreetMap
+- 🔍 Autocomplete search by movie title
+- 🎥 Explore real filming locations
+- 📍 Map markers grouped by shared coordinates
+- 📊 Movie details (cast, production, locations)
+- ⚡ Live data fetching (no backend required)
+- 🎯 Smooth map navigation (fly-to location)
 
-JSON API endpoint used by the app:
+---
 
-`https://data.sfgov.org/resource/yitu-d5am.json`
+## 📸 Screenshots
 
-The current dataset includes latitude and longitude fields, so the app can place filming locations directly on the map.
+### 🏠 Main View
+![Main View](./screenshots/main.png.png)
 
-## Run
+### 🔍 Search & Results
+![Search Results](./screenshots/search.png.png)
 
-Install Node.js, then run:
+---
 
-```bash
-npm install
-npm run dev
-```
+## 📊 Data Source
 
-Open the local Vite URL shown in the terminal.
+This project uses the official **DataSF Film Locations dataset**:
 
-## Build
+- Dataset Page:  
+  https://data.sfgov.org/Culture-and-Recreation/Film-Locations-in-San-Francisco/yitu-d5am/about_data
 
-```bash
-npm run build
-```
+- API Endpoint:  
+  https://data.sfgov.org/resource/yitu-d5am.json
 
-## Project Structure
+The dataset includes latitude and longitude, enabling accurate map visualization.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React
+- **Maps:** Leaflet
+- **Tiles:** OpenStreetMap
+- **Data Source:** DataSF Public API
+- **Styling:** Tailwindcss
+
+---
+
+## 📂 Project Structure
 
 ```text
 src/
@@ -60,12 +80,61 @@ src/
     search.js
 ```
 
-## Features
+## ⚙️ Installation & Setup
 
-- Interactive San Francisco map using Leaflet and OpenStreetMap tiles
-- Live DataSF fetch with no backend required
-- Autocomplete search by movie title
-- Popular movie shortcuts for titles with many San Francisco filming spots
-- Selected movie details with cast, production, and filming location context
-- Map markers grouped by shared coordinates
-- Result cards that fly the map to a selected filming location
+Make sure you have Node.js installed.
+
+```bash
+npm install
+npm run dev
+```
+
+Open the local development URL shown in the terminal.
+
+## 🏗️ Build
+
+```bash
+npm run build
+```
+
+## 🖥️ How to Use
+
+1. Open the app
+2. Search for a movie using the search bar
+3. Select a movie from suggestions
+4. View filming locations on the map
+5. Click markers to see details
+6. Explore San Francisco filming spots
+
+## 🌐 Deployment
+
+Deployed using GitHub Pages.
+
+## 👨‍💻 Developer
+
+Name: Bikramjit Roy
+Role: Software Engineer
+
+Experience:
+- 3.6+ years in Software Development
+
+Skills:
+- React / Next.js / React Native
+- TypeScript / JavaScript
+- React Query
+- CouchDB / MySQL
+
+
+GitHub: https://github.com/bikramjit-1
+
+LinkedIn: https://www.linkedin.com/in/bikramjit-roy/
+
+## 📄 License
+
+This project is created for assessment and demonstration purposes.
+
+## 🙌 Acknowledgements
+
+Data provided by the City and County of San Francisco (DataSF)  
+OpenStreetMap contributors  
+Leaflet for interactive maps
