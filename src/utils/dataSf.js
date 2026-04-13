@@ -1,4 +1,7 @@
-const DATASET_URL = 'https://data.sfgov.org/resource/yitu-d5am.json';
+export const DATASET_PAGE_URL =
+  'https://data.sfgov.org/Culture-and-Recreation/Film-Locations-in-San-Francisco/yitu-d5am/about_data';
+
+const DATASET_API_URL = 'https://data.sfgov.org/resource/yitu-d5am.json';
 
 const fields = [
   'title',
@@ -26,7 +29,7 @@ export function buildDataUrl() {
     $where: 'latitude IS NOT NULL AND longitude IS NOT NULL',
   });
 
-  return `${DATASET_URL}?${params.toString()}`;
+  return `${DATASET_API_URL}?${params.toString()}`;
 }
 
 export function parseMovie(row, index) {

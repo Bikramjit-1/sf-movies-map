@@ -6,6 +6,12 @@ A React service that maps movie filming locations in San Francisco and lets user
 
 The app loads public records from the DataSF Film Locations dataset:
 
+Dataset page:
+
+`https://data.sfgov.org/Culture-and-Recreation/Film-Locations-in-San-Francisco/yitu-d5am/about_data`
+
+JSON API endpoint used by the app:
+
 `https://data.sfgov.org/resource/yitu-d5am.json`
 
 The current dataset includes latitude and longitude fields, so the app can place filming locations directly on the map.

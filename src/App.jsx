@@ -6,6 +6,7 @@ import SearchBox from './components/SearchBox.jsx';
 import StatusMessage from './components/StatusMessage.jsx';
 import StatsPanel from './components/StatsPanel.jsx';
 import { useFilmLocations } from './hooks/useFilmLocations.js';
+import { DATASET_PAGE_URL } from './utils/dataSf.js';
 import { buildSuggestions, filterMovies } from './utils/search.js';
 
 function App() {
@@ -41,7 +42,7 @@ function App() {
 
         <footer>
           Data from{' '}
-          <a href="https://data.sfgov.org/d/yitu-d5am" target="_blank" rel="noreferrer">
+          <a href={DATASET_PAGE_URL} target="_blank" rel="noreferrer">
             DataSF Film Locations
           </a>
           .
