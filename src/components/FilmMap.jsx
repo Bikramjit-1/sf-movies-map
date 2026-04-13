@@ -5,15 +5,15 @@ import { getCoordinateKey, groupByCoordinate } from '../utils/mapGroups.js';
 import { makePopup } from '../utils/popup.js';
 
 const DEFAULT_MARKER_STYLE = {
-  color: '#112a2c',
-  fillColor: '#f45b69',
-  fillOpacity: 0.82,
-  weight: 1.5,
+  color: '#fff7ed',
+  fillColor: '#ea580c',
+  fillOpacity: 0.88,
+  weight: 1.6,
 };
 
 const SELECTED_MARKER_STYLE = {
-  color: '#112a2c',
-  fillColor: '#f6d06f',
+  color: '#fff7ed',
+  fillColor: '#facc15',
   fillOpacity: 0.95,
   weight: 3,
 };
@@ -107,7 +107,13 @@ function FilmMap({ movies, selectedMovie, onPickMovie }) {
     });
   }, [selectedMovie]);
 
-  return <div className="map" ref={mapElement} aria-label="San Francisco movie filming map" />;
+  return (
+    <div
+      className="h-screen w-full bg-slate-950 brightness-75 contrast-125 saturate-75"
+      ref={mapElement}
+      aria-label="San Francisco movie filming map"
+    />
+  );
 }
 
 export default FilmMap;
