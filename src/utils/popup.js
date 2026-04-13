@@ -4,7 +4,7 @@ export function makePopup(group) {
 
   return `
     <section class="popup">
-      <p class="popup-kicker">${group.movies.length} shoot${group.movies.length === 1 ? '' : 's'} here</p>
+      <p class="popup-kicker">${group.movies.length} movie${group.movies.length === 1 ? '/scene' : 's/scenes'} filmed here</p>
       ${movies
         .map(
           (movie) => `

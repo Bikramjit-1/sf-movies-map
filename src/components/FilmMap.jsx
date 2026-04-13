@@ -18,7 +18,7 @@ const SELECTED_MARKER_STYLE = {
   weight: 3,
 };
 
-function FilmMap({ movies, selectedMovie }) {
+function FilmMap({ movies, selectedMovie, onPickMovie }) {
   const mapElement = useRef(null);
   const map = useRef(null);
   const layer = useRef(null);
@@ -68,6 +68,7 @@ function FilmMap({ movies, selectedMovie }) {
 
       marker.on('mouseover', () => marker.openPopup());
       marker.on('mouseout', () => marker.closePopup());
+      marker.on('click', () => onPickMovie(group.movies[0]));
 
       marker.addTo(layer.current);
 
@@ -76,7 +77,7 @@ function FilmMap({ movies, selectedMovie }) {
         marker.bringToFront();
       }
     });
-  }, [movies, selectedMovie]);
+  }, [movies, selectedMovie, onPickMovie]);
 
   useEffect(() => {
     if (!map.current || !movies.length) {

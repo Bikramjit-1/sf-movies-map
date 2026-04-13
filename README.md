@@ -64,6 +64,8 @@ src/
 
 - Interactive San Francisco map using Leaflet and OpenStreetMap tiles
 - Live DataSF fetch with no backend required
-- Autocomplete search across titles, locations, neighborhoods, production companies, directors, and actors
+- Autocomplete search by movie title
+- Popular movie shortcuts for titles with many San Francisco filming spots
+- Selected movie details with cast, production, and filming location context
 - Map markers grouped by shared coordinates
 - Result cards that fly the map to a selected filming location
